@@ -36,16 +36,19 @@ fi
 image_url=`grep  -m 1 -o 'https://www.gstatic.com/prettyearth/assets/full/[0-9]\{0,6\}.jpg' $HOME/Pictures/earthwall/.index.html | head -n1`
 image_name=`echo $image_url | grep '[0-9]\{0,6\}.jpg' -m 1 -o`
 
+if [ ! -f $HOME/Pictures/earthwall/$image_name ]; then
+	# Get image
+	wget -q $image_url -O $HOME/Pictures/earthwall/$image_name 2> /dev/null
+	if [ $? -ne 0 ]; then
+		echo "Failed to get image from www.gstatic.com"
+		exit 1
+	fi
+fi
+
 # TODO: The html has changed, I cannot obtain image location easly
 #cat $HOME/Pictures/earthwall/.index.html | grep title=\"View | grep -o 'View.*in' | sed 's/View //g' | sed 's/ in//g' > $HOME/Pictures/earthwall/.image_location
 #image_location=`cat $HOME/Pictures/earthwall/.image_location | sed 's/, /,/g' | sed 's/ /_/g'`
 
-# Get image
-wget -q $image_url -O $HOME/Pictures/earthwall/$image_name 2> /dev/null
-if [ $? -ne 0 ]; then
-	echo "Failed to get image from www.gstatic.com"
-	exit 1
-fi
 
 feh --bg-scale $HOME/Pictures/earthwall/$image_name 2> /dev/null
 
