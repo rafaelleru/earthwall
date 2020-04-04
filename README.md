@@ -1,6 +1,6 @@
 # earthwall
 
-earthwall.sh is a simple bash script to change your OSX wallpaper to a random image from [earthview.withgoogle.com](https://earthview.withgoogle.com/).
+earthwall.sh is a simple bash script to change your Linux to a random image from [earthview.withgoogle.com](https://earthview.withgoogle.com/) using `feh`.
 You can set up a periodic wallpaper change using cron. Take a look at the example in [Cron](https://github.com/ngserro/earthwall#cron).
 
 ## Installation
