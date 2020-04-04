@@ -2,7 +2,7 @@
 
 # * Name: earthwall.sh
 # * Description: Downloads random image from earthview.withgoogle.com and sets as wallpaper on OSX
-# * Copyright (c) Nuno Serro 2015, Rafael Leyva 2020
+# * Copyright (c) 2015 Nuno Serro , 2020 Rafael Leyva 
 #
 #   This program is free software: you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
