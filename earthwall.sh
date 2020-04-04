@@ -2,9 +2,9 @@
 
 # * Name: earthwall.sh
 # * Description: Downloads random image from earthview.withgoogle.com and sets as wallpaper on OSX
-# * Author: Rafael Leyva
-# * Date: 09/07/2015 22:24:11 WEST
-# * License: This program is free software: you can redistribute it and/or modify
+# * Copyright (c) Nuno Serro 2015, Rafael Leyva 2020
+#
+#   This program is free software: you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
 #   the Free Software Foundation, either version 3 of the License, or
 #   (at your option) any later version.
@@ -14,8 +14,6 @@
 #   GNU General Public License for more details.
 #   You should have received a copy of the GNU General Public License
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-# * Copyright (c) 2015, Rafael Leyva	
 
 # Test if OSX
 if [ "$(uname -s)" != "Linux" ] ; then
